@@ -1,0 +1,29 @@
+<!doctype html>
+
+<head>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script>
+   $(document).ready(function(){
+     $("button").click(function(){
+       $(this).hide();
+     });
+   });
+   </script>
+   </head>
+
+<body> 
+  
+<!-- For loop logic of jinja template -->
+{%for i in range(0, result)%} 
+   {% if i == spy %}
+   <button type="button" onclick="alert('ÉS O ESPIÃO')">P{{i+1}}</button>
+   {% endif %}
+   {% if i != spy %}
+   <button type="button" onclick="alert(' A TUA PALAVRA É : \n {{word}}')">P{{i+1}}</button>
+   {% endif %}
+   <br>
+{%endfor%}
+
+</script>
+
+</body> 
